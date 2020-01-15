@@ -11,10 +11,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>2.0.91</serenity.version>
-        <serenity.maven.version>2.0.91</serenity.maven.version>
-        <serenity.cucumber.version>1.0.30</serenity.cucumber.version>
-        <cucumber.version>4.8.0</cucumber.version>
+        <serenity.version>2.0.55</serenity.version>
+        <serenity.maven.version>2.0.55</serenity.maven.version>
+        <serenity.cucumber.version>1.0.14</serenity.cucumber.version>
+        <cucumber.version>4.2.0</cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <parallel.tests>4</parallel.tests>
@@ -65,6 +65,12 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-cucumber4</artifactId>
+            <version>${serenity.cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>${cucumber.version}</version>
@@ -94,8 +100,8 @@
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-cucumber4</artifactId>
-            <version>${serenity.cucumber.version}</version>
+            <artifactId>serenity-ensure</artifactId>
+            <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -167,15 +173,8 @@
                 <artifactId>serenity-maven-plugin</artifactId>
                 <version>${serenity.maven.version}</version>
                 <configuration>
-                  <tags>${tags}</tags>
+                    <tags>${tags}</tags>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>net.serenity-bdd</groupId>
-                        <artifactId>serenity-core</artifactId>
-                        <version>${serenity.version}</version>
-                    </dependency>
-                </dependencies>
                 <executions>
                     <execution>
                         <id>serenity-reports</id>

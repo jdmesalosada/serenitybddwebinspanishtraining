@@ -1,3 +1,4 @@
+README
 SERENITY WEB TRAINING
 
 Run the tests:
