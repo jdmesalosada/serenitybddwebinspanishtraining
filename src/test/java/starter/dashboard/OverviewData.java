@@ -5,8 +5,8 @@ import net.serenitybdd.screenplay.questions.TextContent;
 
 public class OverviewData {
 
-    public static Question<String> creditAvaible() {
-        return actor -> TextContent.of(FinancialOverview.CREDIT_AVAILABLE).viewedBy(actor).asString();
+    public static Question<String> creditAvailable() {
+        return actor -> TextContent.of(FinancialOverview.CREDIT_AVAILABLE).viewedBy(actor).asString().trim();
     }
 
     public static Question<String> totalBalance() {

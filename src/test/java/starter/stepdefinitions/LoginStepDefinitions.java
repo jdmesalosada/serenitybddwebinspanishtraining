@@ -11,8 +11,10 @@ import starter.dashboard.OverviewData;
 import starter.login.DoLogin;
 import starter.navigation.NavigateTo;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class LoginStepDefinitions {
 
@@ -38,8 +40,10 @@ public class LoginStepDefinitions {
 
     @Then("he should have access to manage his account")
     public void he_should_have_access_to_manage_his_account() {
-        System.out.println("******** " + CreditAvailable.value().answeredBy(theActorInTheSpotlight()));
-        System.out.println("******** " + OverviewData.creditAvaible().answeredBy(theActorInTheSpotlight()));
-
+        theActorInTheSpotlight().should(
+                seeThat("The displayed credit available", OverviewData.creditAvailable(), equalTo("$17,800")),
+                seeThat("The displayed total balance", OverviewData.totalBalance(), equalTo("$17,800")),
+                seeThat("The displayed credit available", OverviewData.creditAvailable(), equalTo("$17,800"))
+        );
     }
 }
