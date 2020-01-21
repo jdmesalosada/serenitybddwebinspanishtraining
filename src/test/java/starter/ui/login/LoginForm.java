@@ -1,4 +1,4 @@
-package starter.login;
+package starter.ui.login;
 
 import org.openqa.selenium.By;
 

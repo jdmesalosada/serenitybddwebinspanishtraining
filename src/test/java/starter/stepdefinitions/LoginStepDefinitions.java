@@ -4,11 +4,12 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import starter.dashboard.CreditAvailable;
-import starter.dashboard.OverviewData;
-import starter.login.DoLogin;
+import starter.ui.dashboard.DashboardPage;
+import starter.questions.dashboard.OverviewData;
+import starter.tasks.login.DoLogin;
 import starter.navigation.NavigateTo;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -42,8 +43,12 @@ public class LoginStepDefinitions {
     public void he_should_have_access_to_manage_his_account() {
         theActorInTheSpotlight().should(
                 seeThat("The displayed credit available", OverviewData.creditAvailable(), equalTo("$17,800")),
-                seeThat("The displayed total balance", OverviewData.totalBalance(), equalTo("$17,800")),
+                //seeThat("The displayed total balance", OverviewData.totalBalance(), equalTo("$17,800")),
                 seeThat("The displayed credit available", OverviewData.creditAvailable(), equalTo("$17,800"))
+        );
+
+        theActorInTheSpotlight().attemptsTo(
+                Click.on(DashboardPage.LEFT_MENU.CREDIT_CARD_LINK)
         );
     }
 }

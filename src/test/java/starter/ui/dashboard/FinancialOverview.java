@@ -1,4 +1,4 @@
-package starter.dashboard;
+package starter.ui.dashboard;
 
 import org.openqa.selenium.By;
 

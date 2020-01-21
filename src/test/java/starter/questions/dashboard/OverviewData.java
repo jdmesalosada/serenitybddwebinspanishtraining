@@ -1,7 +1,8 @@
-package starter.dashboard;
+package starter.questions.dashboard;
 
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.TextContent;
+import starter.ui.dashboard.FinancialOverview;
 
 public class OverviewData {
 

@@ -1,4 +1,4 @@
-package starter.search;
+package starter.ui.search;
 
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.TextContent;

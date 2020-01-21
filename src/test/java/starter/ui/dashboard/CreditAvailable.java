@@ -1,4 +1,4 @@
-package starter.dashboard;
+package starter.ui.dashboard;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;

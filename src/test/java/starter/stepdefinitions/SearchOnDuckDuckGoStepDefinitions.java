@@ -7,13 +7,10 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import starter.navigation.NavigateTo;
-import starter.search.SearchFor;
-import starter.search.SearchResult;
+import starter.ui.search.SearchFor;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
-import static org.hamcrest.Matchers.*;
-import static starter.matchers.StringContainsIgnoringCase.containsIgnoringCase;
 
 public class SearchOnDuckDuckGoStepDefinitions {
 
