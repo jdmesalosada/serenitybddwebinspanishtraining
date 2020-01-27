@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="starter.CucumberTestSuite" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Julians-MacBook-Air.local" time="0.0">
   <properties/>
-  <system-out><![CDATA[22:04:38.051 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+  <system-out><![CDATA[20:28:18.617 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -18,7 +18,43 @@
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
 
-22:04:38.172 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Search by keyword
+20:28:18.655 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Login into the application
+20:28:32.587 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: Successful login
+----------------------------------------------------------------------------
+20:28:32.635 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: Remember things
+----------------------------------------------------------------------------
+Feature: Login into the application
+
+  Scenario: Successful login                         ?[90m# src/test/resources/features/login/login.feature:3?[0m
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1mPepito?[0m?[32m has an active account?[0m               ?[90m# LoginStepDefinitions.has_an_active_account(String)?[0m
+    ?[32mWhen ?[0m?[32mhe sends their valid credentials?[0m            ?[90m# LoginStepDefinitions.he_sends_their_valid_credentials()?[0m
+    ?[32mThen ?[0m?[32mhe should have access to manage his account?[0m ?[90m# LoginStepDefinitions.he_should_have_access_to_manage_his_account()?[0m
+
+  Scenario: Remember things                  ?[90m# src/test/resources/features/login/login.feature:8?[0m
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1mPepito?[0m?[32m wants to remember something?[0m ?[90m# CommonStepDefinitions.setActorName(String)?[0m
+    ?[32mWhen ?[0m?[32mhe tries to remember ?[0m?[32m?[1mFoo?[0m            ?[90m# StepDefinitions1.he_tries_to_remember_Foo(String)?[0m
+    ?[32mThen ?[0m?[32mhe should get Foo?[0m                   ?[90m# StepDefinitions2.he_should_get_Foo()?[0m
+
+2 Scenarios (?[32m2 passed?[0m)
+6 Steps (?[32m6 passed?[0m)
+0m14.376s
+
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
