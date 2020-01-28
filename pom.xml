@@ -133,6 +133,8 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+
+
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.22.1</version>
@@ -146,12 +148,10 @@
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
                     </systemPropertyVariables>
-                    <!--<parallel>classes</parallel>
+                    <parallel>classes</parallel>
                     <threadCount>${parallel.tests}</threadCount>
-                    <forkCount>${parallel.tests}</forkCount> -->
-                    <parallel>suites</parallel>
-                    <threadCount>2</threadCount>
-                    <forkCount>2</forkCount>
+                    <forkCount>${parallel.tests}</forkCount>
+
                 </configuration>
                 <executions>
                     <execution>
