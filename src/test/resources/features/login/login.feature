@@ -1,18 +1,26 @@
-@foo
 Feature: Login into the application
 
-
+  @suite1
   Scenario: Successful login
     Given Pepito has an active account
     When he sends their valid credentials
     Then he should have access to manage his account
 
+  @suite2
+  Scenario: Successful login 2
+    Given Pepito has an active account
+    When he sends their valid credentials
+    Then he should have access to manage his account
 
-  Scenario: Remember things
-    Given Pepito wants to remember something
-    When he tries to remember Foo
-    Then he should get Foo
+  @suite3
+  Scenario: Successful login 3
+    Given Pepito has an active account
+    When he sends their valid credentials
+    Then he should have access to manage his account
 
 
-  Scenario: Remember things 2
-    Given Pepito wants to remember something
+  @suite4
+  Scenario: Successful login 4
+    Given Pepito has an active account
+    When he sends their valid credentials
+    Then he should have access to manage his account
