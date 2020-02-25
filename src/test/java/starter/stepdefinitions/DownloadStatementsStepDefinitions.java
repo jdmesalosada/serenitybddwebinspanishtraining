@@ -18,7 +18,7 @@ public class DownloadStatementsStepDefinitions {
         theActorCalled(name).attemptsTo(
                 NavigateTo.theDuckDuckGoHomePage());
 
-        Thread.sleep(5000);
+        Thread.sleep(20000);
 
     }
 
