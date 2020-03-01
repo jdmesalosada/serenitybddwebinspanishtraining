@@ -27,6 +27,7 @@ public class ReadPdf implements Ability {
     }
 
     public String getText() throws IOException {
+
         int pagesNumber = pdfReader.getNumberOfPages();
 
         StringBuilder pdfText = new StringBuilder();
@@ -38,4 +39,5 @@ public class ReadPdf implements Ability {
         }
         return pdfText.toString();
     }
+
 }

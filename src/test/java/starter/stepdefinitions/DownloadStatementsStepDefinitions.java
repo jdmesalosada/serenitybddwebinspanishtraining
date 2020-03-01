@@ -50,6 +50,7 @@ public class DownloadStatementsStepDefinitions {
         String statementFilePath = String.format("%s/%s", downloadFolder, fileName);
 
         theActorInTheSpotlight().whoCan(ReadPdf.downloadedInPath(statementFilePath));
+
         String pdfText = ReadPdf.as(theActorInTheSpotlight()).getText();
 
         System.out.println(pdfText);
@@ -57,7 +58,6 @@ public class DownloadStatementsStepDefinitions {
 
     @Then("he should see the transactions for last month")
     public void he_should_see_the_transactions_for_last_month() {
-
     }
 
 }
