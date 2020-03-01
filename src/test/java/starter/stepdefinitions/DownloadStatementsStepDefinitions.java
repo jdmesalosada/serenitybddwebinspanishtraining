@@ -3,13 +3,9 @@ package starter.stepdefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.util.EnvironmentVariables;
 import starter.abilities.ReadPdf;
 import starter.navigation.NavigateTo;
-import starter.ui.search.SearchFor;
 
 import java.io.IOException;
 
@@ -37,15 +33,15 @@ public class DownloadStatementsStepDefinitions {
     }
 
     @Given("he already downloaded his statements")
-    public void he_already_downloaded_his_statements() {
-        OnStage.setTheStage(new OnlineCast());
+    public void he_already_downloaded_his_statements() throws InterruptedException {
 
-        Actor actor = theActorCalled(name);
+        theActorCalled(name);
 
-        actor.attemptsTo(
+        withCurrentActor(
                 NavigateTo.theDuckDuckGoHomePage()
         );
 
+        Thread.sleep(5000);
     }
 
     @When("he reviews his transactions")
@@ -55,6 +51,8 @@ public class DownloadStatementsStepDefinitions {
 
         theActorInTheSpotlight().whoCan(ReadPdf.downloadedInPath(statementFilePath));
         String pdfText = ReadPdf.as(theActorInTheSpotlight()).getText();
+
+        System.out.println(pdfText);
     }
 
     @Then("he should see the transactions for last month")
