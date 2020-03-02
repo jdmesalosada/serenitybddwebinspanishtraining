@@ -8,6 +8,7 @@ public class SetTheStage {
 
     @Before
     public void setTheStage() {
+
         OnStage.setTheStage(new OnlineCast());
     }
 

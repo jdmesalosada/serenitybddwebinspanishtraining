@@ -17,7 +17,7 @@
         <cucumber.version>4.2.0</cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
-        <parallel.tests>4</parallel.tests>
+        <parallel.tests>1</parallel.tests>
         <webdriver.base.url></webdriver.base.url>
     </properties>
 
@@ -28,7 +28,7 @@
             </snapshots>
             <id>central</id>
             <name>bintray</name>
-            <url>http://jcenter.bintray.com</url>
+            <url>https://jcenter.bintray.com</url>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -38,11 +38,18 @@
             </snapshots>
             <id>central</id>
             <name>bintray-plugins</name>
-            <url>http://jcenter.bintray.com</url>
+            <url>https://jcenter.bintray.com</url>
         </pluginRepository>
     </pluginRepositories>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>5.5.13.1</version>
+        </dependency>
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>

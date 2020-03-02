@@ -20,3 +20,7 @@ mvn verify -Dcucumber.options="--tags @login"
 gradle clean test -Dcucumber.options="--tags '@login or @foo'"
 gradle clean test -Dcucumber.options="--tags @login"
 
+CHROME PREFERENCES:
+
+https://johnfergusonsmart.com/configuring-chromedriver-easily-with-serenity-bdd/
+https://chromium.googlesource.com/chromium/src/+/master/chrome/common/pref_names.cc
