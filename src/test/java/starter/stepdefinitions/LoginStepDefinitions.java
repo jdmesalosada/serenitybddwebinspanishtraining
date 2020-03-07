@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actions.Click;
 import starter.builders.Login;
+import starter.facts.AToken;
 import starter.navigation.NavigateTo;
 import starter.questions.dashboard.OverviewData;
 import starter.ui.dashboard.DashboardPage;
@@ -22,6 +23,15 @@ public class LoginStepDefinitions {
     public void has_an_active_account(String name) {
         this.name = name;
     }
+
+    @Given("(.*) has a token")
+    public void has_a_token(String name) {
+        this.name = name;
+
+        theActorCalled(name)
+                .has(AToken.toManageTheirProducts());
+    }
+
 
     @When("he sends their valid credentials")
     public void he_sends_their_valid_credentials() {

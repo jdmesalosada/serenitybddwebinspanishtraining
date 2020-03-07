@@ -1,6 +1,5 @@
 Feature: Login into the application
 
-  @dev
   Scenario: Successful login
     Given Pepito has an active account
     When he sends their valid credentials
@@ -24,3 +23,7 @@ Feature: Login into the application
     Given Pepito has an active account
     When he sends their valid credentials
     Then he should have access to manage his account
+
+  @dev
+  Scenario: Successful login 5
+    Given Pepito has a token
