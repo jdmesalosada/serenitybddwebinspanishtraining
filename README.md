@@ -1,6 +1,9 @@
 README
 SERENITY WEB TRAINING
 
+mvn install -DskipTests
+
+
 Run the tests:
 GRADLE
 gradle clean test -Dwebdriver.driver=firefox -Denvironment=staging
