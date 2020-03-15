@@ -24,6 +24,18 @@ Feature: Login into the application
     When he sends their valid credentials
     Then he should have access to manage his account
 
-  @dev
   Scenario: Successful login 5
-    Given Pepito has a token
+    Given Pepito xhas a token
+
+
+   @dev
+  Scenario: Failed 1
+    Given Pepito failed1
+
+  @dev
+  Scenario: Failed 2
+    Given Pepito failed2
+
+  @dev
+  Scenario: Compromised 1
+    Given Pepito compromised
