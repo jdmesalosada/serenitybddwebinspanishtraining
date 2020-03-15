@@ -5,6 +5,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actions.Click;
 import starter.builders.Login;
+import starter.exceptions.EnvironmentError;
+import starter.facts.AToken;
 import starter.navigation.NavigateTo;
 import starter.questions.dashboard.OverviewData;
 import starter.ui.dashboard.DashboardPage;
@@ -21,6 +23,42 @@ public class LoginStepDefinitions {
     @Given("(.*) has an active account")
     public void has_an_active_account(String name) {
         this.name = name;
+    }
+
+    @Given("(.*) has a token")
+    public void has_a_token(String name) {
+        this.name = name;
+
+        theActorCalled(name)
+                .has(AToken.toManageTheirProducts());
+    }
+
+    @Given("(.*) failed1")
+    public void pepito_failed1(String name) {
+
+        theActorCalled(name).should(
+                seeThat("failed 1 ", actor -> true, equalTo(false))
+        );
+
+    }
+
+    @Given("(.*) failed2")
+    public void pepito_failed2(String name) {
+
+        theActorCalled(name).should(
+                seeThat("failed 1 ", actor -> true, equalTo(false))
+        );
+
+    }
+
+    @Given("(.*) compromised")
+    public void pepito_compromised(String name) {
+
+        theActorCalled(name).should(
+                seeThat("",  act -> true, equalTo(false))
+                        .orComplainWith(EnvironmentError.class, "No se tiene conexion con el third party.")
+        );
+
     }
 
     @When("he sends their valid credentials")
