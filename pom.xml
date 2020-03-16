@@ -11,10 +11,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>2.0.55</serenity.version>
-        <serenity.maven.version>2.0.55</serenity.maven.version>
-        <serenity.cucumber.version>1.0.14</serenity.cucumber.version>
-        <cucumber.version>4.2.0</cucumber.version>
+        <serenity.version>2.1.5</serenity.version>
+        <serenity.maven.version>2.1.5</serenity.maven.version>
+        <serenity.cucumber.version>2.1.2</serenity.cucumber.version>
+        <cucumber.version>4.8.0</cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <parallel.tests>1</parallel.tests>
@@ -137,7 +137,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.1</version>
                 <configuration>
-                    <skip>false</skip>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
@@ -181,7 +181,15 @@
                 <version>${serenity.maven.version}</version>
                 <configuration>
                     <tags>${tags}</tags>
+                    <reports>single-page-html</reports>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.serenity-bdd</groupId>
+                        <artifactId>serenity-single-page-report</artifactId>
+                        <version>${serenity.version}</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <id>serenity-reports</id>

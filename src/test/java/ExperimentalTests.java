@@ -25,12 +25,10 @@ public class ExperimentalTests {
     @Test
     public void downloadPDFTest() throws InterruptedException {
 
-        File folder = new File(UUID.randomUUID().toString());
-        folder.mkdir();
 
         Map<String, Object> chromePrefs = new HashMap<>();
         //chromePrefs.put("download.default_directory", "/Users/julianmesa/Downloads");
-        chromePrefs.put("download.default_directory", folder.getAbsolutePath());
+        //chromePrefs.put("download.default_directory", folder.getAbsolutePath());
         chromePrefs.put("profile.default_content_settings.popups", 0);
         chromePrefs.put("download.prompt_for_download", false);
         chromePrefs.put("download.open_pdf_in_system_reader", false);
@@ -55,12 +53,8 @@ public class ExperimentalTests {
     @Test
     public void badCertificateTest() throws InterruptedException {
 
-        File folder = new File(UUID.randomUUID().toString());
-        folder.mkdir();
-
         Map<String, Object> chromePrefs = new HashMap<>();
         //chromePrefs.put("download.default_directory", "/Users/julianmesa/Downloads");
-        chromePrefs.put("download.default_directory", folder.getAbsolutePath());
         chromePrefs.put("profile.default_content_settings.popups", 0);
         chromePrefs.put("download.prompt_for_download", false);
         chromePrefs.put("download.open_pdf_in_system_reader", false);
