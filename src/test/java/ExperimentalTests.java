@@ -1,11 +1,9 @@
-import net.thucydides.core.webdriver.WebdriverAssertionError;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.util.HashMap;
@@ -26,7 +24,7 @@ public class ExperimentalTests {
     public void downloadPDFTest() throws InterruptedException {
 
         File folder = new File(UUID.randomUUID().toString());
-        folder.mkdir();
+        //folder.mkdir();
 
         Map<String, Object> chromePrefs = new HashMap<>();
         //chromePrefs.put("download.default_directory", "/Users/julianmesa/Downloads");
@@ -56,7 +54,7 @@ public class ExperimentalTests {
     public void badCertificateTest() throws InterruptedException {
 
         File folder = new File(UUID.randomUUID().toString());
-        folder.mkdir();
+       // folder.mkdir();
 
         Map<String, Object> chromePrefs = new HashMap<>();
         //chromePrefs.put("download.default_directory", "/Users/julianmesa/Downloads");
